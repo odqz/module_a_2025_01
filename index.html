@@ -4,12 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="css/styles.css">
   <script src="js/animated-words.js" defer></script>
-  <script src="js/carousel.js"></script>
-  <srcipt src="js/map.js"></srcipt>
-  <script src="js/search.js"></script>
+  <script src="js/carousel.js" defer></script>
+  <srcipt src="js/map.js" defer></srcipt>
+  <script src="js/search.js" defer></script>
+  <script src="js/responsive-nav.js" defer></script>
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="fonts/fontawesome/fontawesome.min.css">
+  <link rel="stylesheet" href="fonts/fontawesome/solid.min.css">
 </head>
 <body>
   <header>
@@ -18,40 +20,73 @@
         <img src="img/logo.svg" alt="Spark Studios company logo">
         <h1>Spark Studios</h1>
       </div>
+
       <nav class="header-nav">
         <a href="#hero">Home</a>
         <a href="#about">About</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#value-cta">Contact</a>
       </nav>
+
+      <!-- Shows the hamburger icon when screen width is smaller enough to view navbar -->
+      <button id="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <!-- So the user can close the navbar when on mobile -->
+      <button id="close-nav">
+        <i class="fa-solid fa-x"></i>
+      </button>
     </div>
   </header>
 
+  <!-- This is only availbe on mobile devices -->
+  <div id="mobile-nav-container">
+    <nav class="mobile-nav">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#value-cta">Contact</a>   
+    </nav>
+  </div>
+
   <!-- Hero container -->
-  <section id="hero" class="hero-container container"></section>
+  <section id="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="./img/hero-bg-video.mp4">
+    </video>
+
+    <div class="hero-overlay">
+      <div class="hero-container container">
+        <div class="hero-info">
+          <div>
+
+          </div>
+
+          <h1></h1>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- About section -->
-  <section id="about" class="about-container container"></section>
+  <section id="about"></section>
 
   <!-- Portfolio section -->
-  <section id="portfolio" class="portfolio-container container"></section>
+  <section id="portfolio"></section>
 
   <!-- Value and call to action container -->
-  <section id="value-cta" class="value-cta-container container"></section>
+  <section id="value-cta"></section>
 
   <!-- Clients container -->
-  <section id="clients" class="clients-container container"></section>
+  <section id="clients"></section>
 
   <!-- Info and location container -->
-  <section id="info-location" class="info-location-container container"></section>
+  <section id="info-location"></section>
 
   <!-- Social container -->
-  <section id="social" class="social-container container"></section>
+  <section id="social"></section>
 
-  <footer>
-    <div class="footer container">
-
-    </div>
-  </footer>
+  <footer id="footer"></footer>
 </body>
 </html>

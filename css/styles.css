@@ -61,6 +61,17 @@
   font-family: 'Quicksand regular';
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
   width: 1200px;
 }
@@ -71,6 +82,10 @@ header {
   display: flex;
   justify-content: center;
   padding: 16px;
+  border-bottom: 2px solid var(--border);
+  position: fixed;
+  /* z-index: 1; */
+  width: 100%;
 }
 
 .header-container {
@@ -122,9 +137,56 @@ header {
   width: 100%;
 }
 
+/* Mobile navbar styles */
+#hamburger, #close-nav {
+  display: none;
+  font-size: 28px;
+  background-color: transparent;
+  color: var(--text-light);
+  border: none;
+}
+
+#mobile-nav-container {
+  display: none;
+  width: 100%;
+  background-color: var(--dark-1);
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.mobile-nav > a {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
 /* Hero styles */
 #hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
 
+.hero-video {
+  width: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(135deg, var(--overlay) rgba(30, 39, 73, 0.8));
 }
 
 /* About styles */
@@ -160,4 +222,15 @@ header {
 /* Footer styles */
 footer {
 
+}
+
+/* Responsivness styles */
+@media only screen and (max-width: 768px) {
+  .header-nav {
+    display: none;
+  }
+
+  #hamburger {
+    display: block;
+  }
 }
